@@ -34,6 +34,30 @@ A collection of utilities for the Koshinko project.
 
 3. Explore the utilities in the `scripts/` and `utils/` directories.
 
+# Security Notes
+
+**Important:** The authentication files contain sensitive information:
+- `service-account.json`
+- `credentials.json` 
+- `token.json`
+
+These files should:
+- Never be committed to version control
+- Be stored securely
+- Have restricted access permissions
+
+To set up authentication:
+1. Copy the template files:
+   ```sh
+   cp service-account.template.json service-account.json
+   cp credentials.template.json credentials.json
+   ```
+2. Fill in your actual credentials from Google Cloud Console
+3. Set restrictive permissions:
+   ```sh
+   chmod 600 service-account.json credentials.json
+   ```
+   
 ## Usage
 
 - Run a script:
